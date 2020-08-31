@@ -1,0 +1,31 @@
+{
+  "name": "jsFullStackSimple",
+  "version": "1.0.0",
+  "description": "CRUD Complete APP FullStack JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "fuser -k 3000/tcp & node backend/index.js",
+    "dev": "fuser -k 3000/tcp & nodemon backend/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anbreaker/jsFullStackSimple.git"
+  },
+  "keywords": [],
+  "author": "anbreaker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anbreaker/jsFullStackSimple/issues"
+  },
+  "homepage": "https://github.com/anbreaker/jsFullStackSimple#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.10.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
+  }
+}
