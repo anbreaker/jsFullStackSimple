@@ -1,3 +1,10 @@
+'use stric';
+
+if (process.env.NODE_ENV === 'development') {
+  require('dotenv').config();
+  console.log(`\tWorking on ${process.env.NODE_ENV}`);
+}
+
 const express = require('express');
 const morgan = require('morgan');
 const multer = require('multer');
@@ -5,9 +12,10 @@ const path = require('path');
 
 // Initiazlizations
 const app = express();
+require('./database');
 
 // Settings
-app.set('port', 3000);
+app.set('port', process.env.PORT || 4000);
 
 // Middlewares
 app.use(morgan('dev'));
@@ -24,7 +32,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 // Routes
-app.use('/api/books', require('./routes/books'));
+app.use('/api/books', require('./routes/routes'));
 
 // Static files
 app.use(express.static(path.join(__dirname, 'public')));

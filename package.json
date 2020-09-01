@@ -4,8 +4,8 @@
   "description": "CRUD Complete APP FullStack JS",
   "main": "index.js",
   "scripts": {
-    "start": "fuser -k 3000/tcp & node backend/index.js",
-    "dev": "fuser -k 3000/tcp & nodemon backend/index.js"
+    "dev": "fuser -k 3000/tcp & cross-env NODE_ENV=development nodemon backend/index.js",
+    "start": "cross-env NODE_ENV=production node backend/index.js"
   },
   "repository": {
     "type": "git",
