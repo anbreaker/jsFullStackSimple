@@ -1,3 +1,5 @@
 node_modules
 .env
 backend/public/uploads/*.jpg
+backend/public/css/bundle.css.map
+backend/public/js/bundle.js.map
