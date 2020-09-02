@@ -7,13 +7,13 @@ const Book = require('../models/Book');
 
 // Routes of Server
 router.get('/', async (req, res) => {
-  const books = await Book.find();
+  // const books = await Book.find();
+  const books = await Book.find().sort('-_id');
   res.json(books);
 });
 
 router.post('/', async (req, res) => {
   const {title, author, isbn} = req.body;
-  console.log(req.file.filename);
   const imagePath = `/uploads/${req.file.filename}`;
   const newBook = new Book({title, author, isbn, imagePath});
 

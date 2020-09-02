@@ -27,7 +27,7 @@ app.use(cors());
 const storage = multer.diskStorage({
   destination: path.join(__dirname, 'public/uploads'),
   filename(request, file, callback) {
-    callback(null, `${new Date().getTime()}.${path.extname(file.originalname)}`);
+    callback(null, `${new Date().getTime()}${path.extname(file.originalname)}`);
   },
 });
 app.use(multer({storage}).single('image'));

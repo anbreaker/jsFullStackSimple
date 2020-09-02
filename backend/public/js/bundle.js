@@ -113,7 +113,10 @@ class UI {
       <div class="card m-2">
         <div class="row no-gutters">
           <div class="col-md-4">
+          <!--  
             <img src="http://localhost:3000${book.imagePath}" class="img-fluid" alt="">
+          -->
+            <img src="${book.imagePath}" class="img-fluid" alt="">
           </div>
           <div class="col-md-8">
             <div class="card-block px-2">
@@ -242,7 +245,8 @@ document.getElementById('books-card').addEventListener('click', (event) => {
 __webpack_require__.r(__webpack_exports__);
 class BookService {
   constructor() {
-    this.URI = 'http://localhost:3000/api/books';
+    // this.URI = 'http://localhost:3000/api/books';
+    this.URI = '/api/books';
   }
 
   async getBooks() {
