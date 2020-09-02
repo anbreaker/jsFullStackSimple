@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
+//mode: 'development' || mode: 'production'... To Compile
+
 module.exports = {
   entry: './frontend/app.js',
   output: {

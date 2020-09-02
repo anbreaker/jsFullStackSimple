@@ -43,8 +43,24 @@ class UI {
     document.getElementById('book-form').reset();
   }
 
-  renderMessage() {}
+  renderMessage(message, colorMessage, secondsToRemove) {
+    const divSms = document.createElement('div');
+    divSms.className = `alert alert-${colorMessage} message`;
 
-  deleteBook() {}
+    divSms.appendChild(document.createTextNode(message));
+
+    const containerSms = document.querySelector('.show-sms');
+    const bookForm = document.querySelector('#book-form');
+
+    containerSms.insertBefore(divSms, bookForm);
+    setTimeout(() => {
+      document.querySelector('.message').remove();
+    }, secondsToRemove);
+  }
+
+  async deleteBook(bookId) {
+    await bookService.deleteBook(bookId);
+    this.renderBooks();
+  }
 }
 export default UI;

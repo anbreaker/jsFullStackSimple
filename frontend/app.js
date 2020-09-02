@@ -21,5 +21,17 @@ document.getElementById('book-form').addEventListener('submit', (event) => {
   const ui = new UI();
   ui.addNetBook(formData);
 
+  ui.renderMessage('New Book Adden', 'success', 2000);
+
+  event.preventDefault();
+});
+
+document.getElementById('books-card').addEventListener('click', (event) => {
+  if (event.target.classList.contains('delete')) {
+    console.log(event.target.getAttribute('_id'));
+    const ui = new UI();
+    ui.deleteBook(event.target.getAttribute('_id'));
+    ui.renderMessage('Book Removed', 'danger', 2000);
+  }
   event.preventDefault();
 });
