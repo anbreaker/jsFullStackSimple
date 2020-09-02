@@ -19,6 +19,8 @@
 
 ### 🏠 [Homepage](https://github.com/anbreaker/jsFullStackSimple#readme)
 
+### ✨ [Demo](https://jsfullstack-books.herokuapp.com)
+
 ## Install
 
 ```sh
