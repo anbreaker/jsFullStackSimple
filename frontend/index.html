@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FullStack JavaScript</title>
     <!-- Boostrap4 - bootswatch-hero -->
     <link
@@ -29,7 +29,7 @@
             <div class="form-group">
               <input
                 type="text"
-                name="title"
+                id="title"
                 class="form-control"
                 placeholder="Book Title"
                 autofocus
@@ -37,16 +37,11 @@
             </div>
 
             <div class="form-group">
-              <input
-                type="text"
-                name="author"
-                class="form-control"
-                placeholder="Author"
-              />
+              <input type="text" id="author" class="form-control" placeholder="Author" />
             </div>
 
             <div class="form-group">
-              <input type="text" name="isbn" class="form-control" placeholder="Isbn" />
+              <input type="text" id="isbn" class="form-control" placeholder="Isbn" />
             </div>
             <div class="input-group mb-3">
               <div class="custom-file">
